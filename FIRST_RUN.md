@@ -8,6 +8,17 @@ factory is not operational.
 There are two ways this skeleton got here. Determine which, then
 follow that track.
 
+## In both modes: the wiki and its site
+
+The skeleton ships `wiki/` (the knowledge base — research accumulates
+there with sources from day one) and `.github/workflows/pages.yml`
+(publishes it as the repo's GitHub Pages site). After the repo exists
+on GitHub, enable Pages once:
+
+    gh api repos/{owner}/{repo}/pages -X POST -f build_type=workflow
+
+Replace `{{REPO_NAME}}` in `wiki/README.md` with the rest.
+
 ## Which mode am I in?
 
 - **Inserted** — this repo already contains a product (source code,

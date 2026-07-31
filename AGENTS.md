@@ -24,6 +24,11 @@ as a rule ("X never imports Y"), not a description.]
 - **Builds are warning-clean.**
 - **Dependencies are pinned and audited.** Anything new needs a
   MISSION.md audit recorded in `PROGRESS.md`.
+- **Research lands in the wiki, with sources.** Anything fetched,
+  read, or decided from evidence goes into `wiki/` as it happens — a
+  claim without a source is a TODO. The wiki publishes via GitHub
+  Pages (`.github/workflows/pages.yml`); deep working notes go to
+  `research/` and the wiki cites them.
 - [repo-specific discipline — concurrency model, generated files,
   forbidden APIs…]
 
