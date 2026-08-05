@@ -2,6 +2,9 @@
 
 > FIRST RUN: replace this file's bracketed sections. Inferred
 > invariants must be marked `(draft — owner to confirm)`.
+>
+> UPGRADING an existing factory: keep the charter and every
+> owner-confirmed invariant as written. Add, don't restate.
 
 ## What this is
 

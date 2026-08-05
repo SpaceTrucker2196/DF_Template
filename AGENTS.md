@@ -6,6 +6,10 @@ the pattern and autonomy contract in `docs/dark-factory.md`.
 
 > FIRST RUN: fill the Architecture and Conventions sections from the
 > observed codebase. Match its real idioms — don't prescribe new ones.
+>
+> UPGRADING a repo that already runs a factory: evaluate and update,
+> never replace. A template stub never overwrites real content — see
+> FIRST_RUN.md Track C.
 
 ## What {{REPO_NAME}} is
 
@@ -29,6 +33,11 @@ as a rule ("X never imports Y"), not a description.]
   claim without a source is a TODO. The wiki publishes via GitHub
   Pages (`.github/workflows/pages.yml`); deep working notes go to
   `research/` and the wiki cites them.
+- **The repo stays legible to cygnus**, our code-viz tool. The
+  ledger/metrics table shapes, the converge step format, and the
+  `(closes #N)` commit convention are a machine-read contract — see
+  FACTORY.md's "Code visualization" section before changing any of
+  them.
 - [repo-specific discipline — concurrency model, generated files,
   forbidden APIs…]
 

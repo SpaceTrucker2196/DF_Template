@@ -38,6 +38,10 @@ An agent self-checks on first run:
 
 > FIRST RUN: set these three lists with the owner. Until then,
 > everything not listed under "decides" is stops-and-asks.
+>
+> UPGRADING an existing factory: the owner set these lists. Leave
+> them alone — widening the agent's autonomy is the owner's call,
+> never an upgrade's side effect.
 
 **The agent decides** (no flag needed):
 - [e.g. internal refactors that keep the suite green]

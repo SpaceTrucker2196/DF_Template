@@ -2,6 +2,10 @@
 
 > FIRST RUN: fill from the observed codebase; keep the outbound
 > surface list exhaustive.
+>
+> UPGRADING an existing factory: keep the repo's threat model; audit
+> the outbound surface list against the current code and append what
+> is missing. Removing an entry is a stops-and-asks.
 
 ## Threat model
 
