@@ -9,3 +9,4 @@ it. Energy estimate for the whole ledger: `ledger.py --energy-total`.
 |--------|------|----------|------:|-------:|-----------:|------------:|---------:|---------|
 <!-- ledger rows appended here -->
 | f066bbe | 2026-08-05T16:44:28Z | claude-opus-5 | 131 | 65143 | 4392990 | 157363 | 5.3994 | Add Track C upgrade mode and cygnus code-viz integration to the template |
+| 2db6926 | 2026-08-06T18:27:33Z | claude-opus-5 | 1694 | 828779 | 283774686 | 5074581 | 213.3611 | Add DECISIONS.md: the record of what the factory refused |
