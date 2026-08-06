@@ -33,6 +33,12 @@ as a rule ("X never imports Y"), not a description.]
   claim without a source is a TODO. The wiki publishes via GitHub
   Pages (`.github/workflows/pages.yml`); deep working notes go to
   `research/` and the wiki cites them.
+- **Decisions and refusals land in `DECISIONS.md`.** Anything a future
+  agent would otherwise re-argue from scratch gets a row and a
+  section. **A refusal is a decision**: "we measured this and it does
+  not work" leaves no code behind, so nothing in the repo reminds
+  anyone it happened — record it with its numbers or it gets rebuilt.
+  Before proposing something structural, search the record first.
 - **The repo stays legible to cygnus**, our code-viz tool. The
   ledger/metrics table shapes, the converge step format, and the
   `(closes #N)` commit convention are a machine-read contract — see

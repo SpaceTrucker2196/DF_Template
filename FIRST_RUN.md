@@ -133,6 +133,10 @@ rebuilding it. Read the prime directive above before step 1.
 These are the repo's memory. Read them; do not rewrite, reformat,
 renumber, or "clean up" them:
 
+- `DECISIONS.md` — append-only. Supersede a decision with a new row;
+  never edit or delete an old one. The refusals are the most valuable
+  rows in the file precisely because nothing else in the repo records
+  them.
 - `LEDGER.md` and `METRICS.md` rows — append-only, script-generated.
   You may update the header prose above the table if the skeleton
   documents a flag the local copy is missing; never a row.
@@ -166,6 +170,7 @@ as *missing*, *stale*, or *fine*:
 | `docs/converge.md`, `.claude/commands/converge.md` | The converge loop is documented and invokable |
 | `LEDGER.md` | Header documents `ledger.py --append`; rows exist if commits do |
 | `METRICS.md` | One row per shipped order |
+| `DECISIONS.md` | Decisions and refusals recorded with evidence, headers unchanged |
 | `SECURITY.md` | Outbound surface list is exhaustive and current |
 | `PROGRESS.md`, `ROADMAP.md` | Current, not stale by months |
 | `wiki/` + `.github/workflows/pages.yml` | Wiki exists with house rules; Pages workflow present and enabled |

@@ -62,11 +62,11 @@ Keeping the picture honest is a repo-side job. Cygnus reads:
   `FACTORY.md`, `PROGRESS.md`, `ROADMAP.md`, `docs/milestones.md`,
   `README.md`, and markdown under `docs/`, `docs/wiki/`,
   `docs/views/`. Docs outside those roots don't reach the dashboard.
-- **`LEDGER.md` / `METRICS.md` tables** — parsed *positionally* by
-  column order. Keep the shipped headers and column order exactly;
-  a renamed or reordered column silently drops rows from the
-  dashboard. `LEDGER.md` is machine-owned (read-only in the app),
-  `METRICS.md` append-only.
+- **`LEDGER.md` / `METRICS.md` / `DECISIONS.md` tables** — parsed
+  *positionally* by column order. Keep the shipped headers and column
+  order exactly; a renamed or reordered column silently drops rows
+  from the dashboard. `LEDGER.md` is machine-owned (read-only in the
+  app), `METRICS.md` and `DECISIONS.md` are append-only.
 - **`docs/converge.md` steps** — numbered `N. **Title.** detail…`.
   Keep that shape or the loop stops rendering.
 - **Commit subjects** — `(closes #N)` / `fixes #N` / `resolves #N`
