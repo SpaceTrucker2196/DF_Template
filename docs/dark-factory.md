@@ -12,6 +12,13 @@ repo-local adaptation.
   (docs/converge.md) runs one order to a pushed commit.
 - **The oracle is the test suite.** The merge gate is the local green
   suite enforced pre-push; CI is a post-hoc judge, never the gate.
+- **A slow suite tiers the gate — it never lowers it.** When the full
+  run grows too slow to pay at every commit, the owner may rule:
+  targeted tests at commit, the full suite at the push, marathon
+  suites at release only. Long runs go to a background task and get
+  read when they land. Never start a full suite on a machine already
+  running one — two runs halve each other. Tiering is an owner
+  decision, recorded in DECISIONS.md, never improvised mid-session.
 - **Instrumentation is mandatory**: every shipped order appends a
   `METRICS.md` row; every substantive commit appends a `LEDGER.md`
   row via `ledger.py`.

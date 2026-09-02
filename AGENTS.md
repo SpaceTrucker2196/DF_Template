@@ -24,7 +24,10 @@ as a rule ("X never imports Y"), not a description.]
 ## Discipline
 
 - **Tests must pass.** The oracle is the command in FACTORY.md's
-  TL;DR; it returns 0 before any push. Never commit a red test.
+  TL;DR; it returns 0 before any push. Never commit a red test. If
+  the suite grows too slow to pay at every commit, the owner may
+  tier the gate (docs/dark-factory.md §1) — an owner decision
+  recorded in DECISIONS.md, never improvised.
 - **Builds are warning-clean.**
 - **Dependencies are pinned and audited.** Anything new needs a
   MISSION.md audit recorded in `PROGRESS.md`.
@@ -66,7 +69,10 @@ every substantive commit: run `~/.claude/billing/ledger.py --append
 rewrite rows (append-only); if the script can't produce a row, stop
 and surface it. Start billable sessions **inside this repo**, not
 the workspace root (ledger.py can't attribute sessions launched from
-outside the repo).
+outside the repo). If the script still finds no transcripts — the
+session ran from elsewhere, or the derived transcript path doesn't
+match — pass `--session-cwd <dir>` with the directory the session
+was actually launched from.
 
 Reporting (optional, read-only): `ledger.py --energy-total`
 estimates the rough datacenter energy (kWh) behind the whole ledger;
