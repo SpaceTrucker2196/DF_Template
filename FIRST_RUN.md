@@ -219,3 +219,21 @@ as *missing*, *stale*, or *fine*:
 - The mission, conventions, tests, and autonomy boundary live
   in-tree. When the owner corrects you, the correction lands in a
   doc, not just in the conversation.
+- **Fill the egress allowlist before the first autonomous run.**
+  `.claude/settings.json` ships with `sandbox.network.allowedDomains`
+  EMPTY, which is default-deny: a sandboxed command reaches nothing.
+  Copy the hostnames from `SECURITY.md`'s frozen outbound surface into
+  it. An empty list is correct for a factory that talks to nothing; it
+  is a bug for one that pushes to a remote.
+- **Ask the owner to set `strictAllowlist` once, in their own
+  settings.** A project settings file cannot set it — Claude Code
+  ignores `sandbox.network.strictAllowlist` in `.claude/settings.json`
+  by design, so a checked-in file cannot assert policy. Until it is set
+  in `~/.claude/settings.json` or in managed settings, an unlisted host
+  prompts rather than being refused. This is a stops-and-asks; it is
+  the owner's machine.
+- **Widen the command allowlist by SUBCOMMAND, never with a wildcard.**
+  `Bash(git *)` permits `git -c core.hooksPath=... status`, which is
+  arbitrary execution. Adding a subcommand is a stops-and-asks. See
+  `SECURITY.md` for why the denylist was rejected and why pattern
+  matching is not the boundary.

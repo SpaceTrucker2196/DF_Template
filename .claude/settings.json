@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git checkout *)",
+      "Bash(git switch *)",
+      "Bash(git restore *)",
+      "Bash(git stash *)",
+      "Bash(git fetch *)",
+      "Bash(git merge *)",
+      "Bash(git rebase *)",
+      "Bash(git tag *)",
+      "Bash(make test *)",
+      "Bash(make check *)"
+    ],
+    "deny": [
+      "Bash(git -c *)",
+      "Bash(git --exec-path *)",
+      "Bash(git daemon *)",
+      "Bash(git upload-pack *)",
+      "Bash(git receive-pack *)",
+      "Bash(git filter-branch *)",
+      "Bash(git config core.hooksPath *)",
+      "Bash(git config --global core.hooksPath *)"
+    ],
+    "ask": [
+      "Bash(git push *)",
+      "Bash(gh *)"
+    ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "network": {
+      "allowedDomains": [],
+      "deniedDomains": []
+    }
+  }
+}
