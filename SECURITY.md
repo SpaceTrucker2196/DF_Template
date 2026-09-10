@@ -59,4 +59,31 @@ content before inspecting the command. That is why `push` sits under
 that actually holds. The allowlist reduces the surface. The harness
 contains what gets through it.
 
+## The workflow audit
+
+`make audit` (`tools/audit-workflows.sh`) checks this factory's own
+GitHub Actions against the three lab findings. Zero dependencies —
+grep and awk — because a check that needs installing is a check that
+stops being run. It looks for:
+
+1. **A write-scoped token on an attacker-controlled trigger.** The
+   Google ADK finding: content in a pull request reached a
+   low-privilege triage agent, which posted a comment, which triggered
+   a maintainer-gated workflow, which inherited issue and
+   pull-request write scope. A maintainer gate is worth nothing if a
+   lower-privilege agent can trigger it. A missing `permissions:`
+   block counts, because the run then inherits the repository default.
+2. **`pull_request_target` at all.** It runs with the base
+   repository's secrets against the pull request's code.
+3. **A workflow that writes an instruction file.** The static half of
+   the Codex finding.
+
+It is green today: `pages.yml` triggers on `push` and writes nothing.
+A red here is a regression, not noise.
+
+**What it cannot check, said plainly rather than left to silence:**
+whether two agent passes share a writable checkout at RUNTIME. That
+depends on what the agent does, not on what the YAML says. Read any
+multi-pass workflow by hand.
+
 Findings and citations: SpaceTrucker2196/DF_Template#1.

@@ -5,6 +5,13 @@
 # UPGRADING: if the repo already has a working oracle, delete this
 # file — it must never shadow a real Makefile or test command.
 
+# The workflow audit. Zero dependencies, so there is no excuse for it
+# not to run. Green today (one push-triggered workflow); a red here is
+# a real regression, not noise.
+.PHONY: audit
+audit:
+	@tools/audit-workflows.sh
+
 .PHONY: test
 test:
 	@echo "FIRST RUN: 'make test' is not wired to a real suite yet."
