@@ -1,7 +1,6 @@
 # DF_Template
 
-Bare dark-factory skeleton, modeled on sloth (the canonical
-dark-factory repo). Three ways to use it:
+Bare dark-factory skeleto. Three ways to use it:
 
 **Insert into an existing repo** — copy every file except this
 README into the repo (never overwrite files that exist), then point
