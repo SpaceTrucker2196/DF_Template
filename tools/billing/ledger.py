@@ -136,7 +136,7 @@ def resolve_price(model_cfg, ts_dt: datetime, model: str, ts: str):
 
 
 def collect_usage(projdir: Path, start: str, end: str, models_cfg: dict) -> dict:
-    """Walk all *.jsonl files and aggregate assistant-turn usage in (start, end].
+    """Walk every *.jsonl under projdir (recursively) and aggregate assistant-turn usage in (start, end].
 
     Turns are bucketed by (model, service_tier, price_effective_date) so that a
     window straddling a price change is billed with the correct rate on each side.
@@ -154,7 +154,11 @@ def collect_usage(projdir: Path, start: str, end: str, models_cfg: dict) -> dict
     if not projdir.exists():
         die(4, f"transcript dir not found: {projdir}")
 
-    for path in sorted(projdir.glob("*.jsonl")):
+    # Subagent, workflow and teammate transcripts live under
+    # <session>/subagents/**/*.jsonl and are billed like any other turn, so
+    # walk the whole tree. (Before 2026-09-15 only the top level was read and
+    # every window that spawned agents was under-billed.)
+    for path in sorted(projdir.rglob("*.jsonl")):
         try:
             with open(path) as f:
                 for line in f:
