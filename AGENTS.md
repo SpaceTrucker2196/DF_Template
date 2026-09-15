@@ -90,7 +90,9 @@ as a rule ("X never imports Y"), not a description.]
 
 ## Token / Cost Ledger
 
-The owner bills from `LEDGER.md` (exact, never estimated). After
+The owner bills from `LEDGER.md` (exact, never estimated). The script
+and its price table ship in `tools/billing/`; if `~/.claude/billing/`
+is missing on this box, run `sh tools/billing/install.sh` once. After
 every substantive commit: run `~/.claude/billing/ledger.py --append
 --summary "<desc>"`, then commit `LEDGER.md` as its own
 `chore(ledger): <sha>` commit. Never hand-author, estimate, or

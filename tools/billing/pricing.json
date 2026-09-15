@@ -1,0 +1,55 @@
+{
+  "_comment": "Per-million-token USD pricing for Anthropic Claude models. Cache-write tiers: cw5 = ephemeral 5m, cw1h = ephemeral 1h. cr = cache read. Long-context (1M) variants priced separately under <model>[1m]. Service-tier multipliers (batch=0.5x, priority=1.0x but eligible for surcharge) applied at compute time. Verify against https://www.anthropic.com/pricing before invoicing. EFFECTIVE-DATED PRICING: a model may be a flat price object (in effect for all time) OR a list of dated entries [{\"effective\":\"ISO8601\",\"in\":..,\"out\":..,\"cw5\":..,\"cw1h\":..,\"cr\":..}, ...]. Each turn is priced at the entry whose 'effective' date is the latest one <= the turn's timestamp. To change a price, APPEND a new dated entry — never edit an existing one — so past ledger rows reproduce exactly and the new rate never applies retroactively.",
+  "_updated": "2026-07-25",
+  "_source_url": "https://www.anthropic.com/pricing",
+  "_unverified": "claude-fable-5-1 added 2026-09-03 from the bundled claude-api skill reference (cached 2026-06-24): same tier and per-token rate as claude-fable-5 ($10/$50), cache reads $0.25/MTok; cache-write tiers assumed at the standard 1.25x/2x of input. NOT verified against the pricing page; verify before invoicing rows dated 2026-09-03 or later. claude-opus-5 and claude-opus-5[1m] were added 2026-07-25 at the owner's instruction to default to the last Opus rate (claude-opus-4-8). NOT verified against the pricing page. If the real Opus 5 rate differs, do not edit these entries — append a dated entry per the policy above, and note that rows already billed at this default will not be restated. claude-sonnet-5 added 2026-08-03 from Anthropic's published rates ($3/$15 sticker; introductory $2/$10 through 2026-08-31, so the intro rate is the first dated entry and the sticker rate takes effect 2026-09-01). claude-sonnet-5[1m] defaults to the base rate — no long-context premium documented for Sonnet 5; verify before invoicing 1M-window usage.",
+  "models": {
+    "claude-fable-5-1":    {"in": 10.00, "out": 50.00, "cw5": 12.50, "cw1h": 20.00, "cr": 0.25},
+    "claude-fable-5":      {"in": 10.00, "out": 50.00, "cw5": 12.50, "cw1h": 20.00, "cr": 1.00},
+    "claude-opus-5":       {"in":  5.00, "out": 25.00, "cw5":  6.25, "cw1h": 10.00, "cr": 0.50},
+    "claude-opus-5[1m]":   {"in":  5.00, "out": 25.00, "cw5":  6.25, "cw1h": 10.00, "cr": 0.50},
+    "claude-opus-4-8":     {"in":  5.00, "out": 25.00, "cw5":  6.25, "cw1h": 10.00, "cr": 0.50},
+    "claude-opus-4-7": [
+      {"effective": "1970-01-01T00:00:00Z", "in": 15.00, "out": 75.00, "cw5": 18.75, "cw1h": 30.00, "cr": 1.50},
+      {"effective": "2026-07-05T00:00:00Z", "in":  5.00, "out": 25.00, "cw5":  6.25, "cw1h": 10.00, "cr": 0.50}
+    ],
+    "claude-opus-4-7[1m]": [
+      {"effective": "1970-01-01T00:00:00Z", "in": 30.00, "out": 112.50, "cw5": 37.50, "cw1h": 60.00, "cr": 3.00},
+      {"effective": "2026-07-05T00:00:00Z", "in":  5.00, "out":  25.00, "cw5":  6.25, "cw1h": 10.00, "cr": 0.50}
+    ],
+    "claude-opus-4-6": [
+      {"effective": "1970-01-01T00:00:00Z", "in": 15.00, "out": 75.00, "cw5": 18.75, "cw1h": 30.00, "cr": 1.50},
+      {"effective": "2026-07-05T00:00:00Z", "in":  5.00, "out": 25.00, "cw5":  6.25, "cw1h": 10.00, "cr": 0.50}
+    ],
+    "claude-opus-4-5": [
+      {"effective": "1970-01-01T00:00:00Z", "in": 15.00, "out": 75.00, "cw5": 18.75, "cw1h": 30.00, "cr": 1.50},
+      {"effective": "2026-07-05T00:00:00Z", "in":  5.00, "out": 25.00, "cw5":  6.25, "cw1h": 10.00, "cr": 0.50}
+    ],
+    "claude-opus-4-1":     {"in": 15.00, "out": 75.00, "cw5": 18.75, "cw1h": 30.00, "cr": 1.50},
+    "claude-opus-4":       {"in": 15.00, "out": 75.00, "cw5": 18.75, "cw1h": 30.00, "cr": 1.50},
+    "claude-sonnet-5": [
+      {"effective": "1970-01-01T00:00:00Z", "in": 2.00, "out": 10.00, "cw5": 2.50, "cw1h": 4.00, "cr": 0.20},
+      {"effective": "2026-09-01T00:00:00Z", "in": 3.00, "out": 15.00, "cw5": 3.75, "cw1h": 6.00, "cr": 0.30}
+    ],
+    "claude-sonnet-5[1m]": [
+      {"effective": "1970-01-01T00:00:00Z", "in": 2.00, "out": 10.00, "cw5": 2.50, "cw1h": 4.00, "cr": 0.20},
+      {"effective": "2026-09-01T00:00:00Z", "in": 3.00, "out": 15.00, "cw5": 3.75, "cw1h": 6.00, "cr": 0.30}
+    ],
+    "claude-sonnet-4-6":     {"in":  3.00, "out": 15.00, "cw5":  3.75, "cw1h":  6.00, "cr": 0.30},
+    "claude-sonnet-4-6[1m]": {"in":  6.00, "out": 22.50, "cw5":  7.50, "cw1h": 12.00, "cr": 0.60},
+    "claude-sonnet-4-5":     {"in":  3.00, "out": 15.00, "cw5":  3.75, "cw1h":  6.00, "cr": 0.30},
+    "claude-sonnet-4-5[1m]": {"in":  6.00, "out": 22.50, "cw5":  7.50, "cw1h": 12.00, "cr": 0.60},
+    "claude-sonnet-4":       {"in":  3.00, "out": 15.00, "cw5":  3.75, "cw1h":  6.00, "cr": 0.30},
+    "claude-haiku-4-5":    {"in":  1.00, "out":  5.00, "cw5":  1.25, "cw1h":  2.00, "cr": 0.10}
+  },
+  "server_tools": {
+    "_comment": "Per-request USD pricing for server-side tool use.",
+    "web_search_per_request": 0.010,
+    "web_fetch_per_request": 0.0
+  },
+  "service_tier_multipliers": {
+    "standard": 1.0,
+    "batch": 0.5,
+    "priority": 1.0
+  }
+}
