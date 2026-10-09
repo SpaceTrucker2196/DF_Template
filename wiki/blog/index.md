@@ -55,6 +55,7 @@ Order numbers go up and are never reused. Order 001 was written after Order 002 
 | 2026-09-29 | 042 | [The alert worked. The stop did not.](2026-09-29-the-alert-worked-the-stop-did-not.html) | Briefing, Oversight, Security |
 | 2026-10-01 | 043 | [The agent does not hold the keys](2026-10-01-the-agent-does-not-hold-the-keys.html) | Briefing, Security, Oversight |
 | 2026-10-05 | 044 | [A permission check is only as good as its parser](2026-10-05-a-permission-check-is-only-as-good-as-its-parser.html) | Briefing, Security, Practice |
+| 2026-10-09 | 046 | [Dark Factory Digest, week of October 5, 2026](2026-10-09-dark-factory-digest-week-of-october-5-2026.html) | Digest, Briefing |
 
 ## Summaries
 
@@ -146,3 +147,4 @@ Order numbers go up and are never reused. Order 001 was written after Order 002 
 
 **[A permission check is only as good as its parser](2026-10-05-a-permission-check-is-only-as-good-as-its-parser.html)** (Order 044, 2026-10-05). A sandboxed agent turned off its own sandbox with one curl command. An approval check read a shell command differently from the shell. A benchmark claim fell from 94 percent to 54 percent. IBM took its coding agent behind the customer wall.
 
+**[Dark Factory Digest, week of October 5, 2026](2026-10-09-dark-factory-digest-week-of-october-5-2026.html)** (Order 046, 2026-10-09). The control must sit outside the agent: a gate that the agent can reach, that misreads text, or that fails open is not a gate. A quiet week: two sandbox and parser failures, a hook design that fails open, and no vendor willing to guarantee agent compliance.

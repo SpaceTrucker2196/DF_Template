@@ -85,3 +85,4 @@ Source: the commit log of this repository.
 | 2026-09-29 | 042 | [The alert worked. The stop did not.](../blog/2026-09-29-the-alert-worked-the-stop-did-not.html) |
 | 2026-10-01 | 043 | [The agent does not hold the keys](../blog/2026-10-01-the-agent-does-not-hold-the-keys.html) |
 | 2026-10-05 | 044 | [A permission check is only as good as its parser](../blog/2026-10-05-a-permission-check-is-only-as-good-as-its-parser.html) |
+| 2026-10-09 | 046 | [Dark Factory Digest, week of October 5, 2026](../blog/2026-10-09-dark-factory-digest-week-of-october-5-2026.html) |
