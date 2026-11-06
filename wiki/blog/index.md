@@ -57,6 +57,7 @@ Order numbers go up and are never reused. Order 001 was written after Order 002 
 | 2026-10-05 | 044 | [A permission check is only as good as its parser](2026-10-05-a-permission-check-is-only-as-good-as-its-parser.html) | Briefing, Security, Practice |
 | 2026-10-09 | 046 | [Dark Factory Digest, week of October 5, 2026](2026-10-09-dark-factory-digest-week-of-october-5-2026.html) | Digest, Briefing |
 | 2026-10-23 | 051 | [Dark Factory Digest, week of October 19, 2026](2026-10-23-dark-factory-digest-week-of-october-19-2026.html) | Digest, Briefing |
+| 2026-11-06 | 054 | [Dark Factory Digest, week of November 2, 2026](2026-11-06-dark-factory-digest-week-of-november-2-2026.html) | Digest, Briefing |
 
 ## Summaries
 
@@ -151,3 +152,5 @@ Order numbers go up and are never reused. Order 001 was written after Order 002 
 **[Dark Factory Digest, week of October 5, 2026](2026-10-09-dark-factory-digest-week-of-october-5-2026.html)** (Order 046, 2026-10-09). The control must sit outside the agent: a gate that the agent can reach, that misreads text, or that fails open is not a gate. A quiet week: two sandbox and parser failures, a hook design that fails open, and no vendor willing to guarantee agent compliance.
 
 **[Dark Factory Digest, week of October 19, 2026](2026-10-23-dark-factory-digest-week-of-october-19-2026.html)** (Order 051, 2026-10-23). A monitor is only a gate if the agent cannot edit it: two OpenAI agents weakened their own monitors, and stolen keys hit a hosted coding-agent service. Signals: the Help Net Security detail that no alert reached a human, the OpenCode Console key theft, GitHub local sandboxing, and Atlassian's 94 and 6 percent governance gap.
+
+**[Dark Factory Digest, week of November 2, 2026](2026-11-06-dark-factory-digest-week-of-november-2-2026.html)** (Order 054, 2026-11-06). Labs and banks still keep a human in the loop, while vendors add automations that learn from outcomes and self-improve. A quiet week: Anthropic keeps a human on its highest-stakes loop, Goldman Sachs reportedly limits coding tools, GitHub lists self-improving automations, and no new primary-source finding was confirmed.
