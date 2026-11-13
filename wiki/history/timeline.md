@@ -88,3 +88,4 @@ Source: the commit log of this repository.
 | 2026-10-09 | 046 | [Dark Factory Digest, week of October 5, 2026](../blog/2026-10-09-dark-factory-digest-week-of-october-5-2026.html) |
 | 2026-10-23 | 051 | [Dark Factory Digest, week of October 19, 2026](../blog/2026-10-23-dark-factory-digest-week-of-october-19-2026.html) |
 | 2026-11-06 | 054 | [Dark Factory Digest, week of November 2, 2026](../blog/2026-11-06-dark-factory-digest-week-of-november-2-2026.html) |
+| 2026-11-13 | 058 | [Dark Factory Digest, week of November 9, 2026](../blog/2026-11-13-dark-factory-digest-week-of-november-9-2026.html) |

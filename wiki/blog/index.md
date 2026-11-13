@@ -58,6 +58,7 @@ Order numbers go up and are never reused. Order 001 was written after Order 002 
 | 2026-10-09 | 046 | [Dark Factory Digest, week of October 5, 2026](2026-10-09-dark-factory-digest-week-of-october-5-2026.html) | Digest, Briefing |
 | 2026-10-23 | 051 | [Dark Factory Digest, week of October 19, 2026](2026-10-23-dark-factory-digest-week-of-october-19-2026.html) | Digest, Briefing |
 | 2026-11-06 | 054 | [Dark Factory Digest, week of November 2, 2026](2026-11-06-dark-factory-digest-week-of-november-2-2026.html) | Digest, Briefing |
+| 2026-11-13 | 058 | [Dark Factory Digest, week of November 9, 2026](2026-11-13-dark-factory-digest-week-of-november-9-2026.html) | Digest, Briefing |
 
 ## Summaries
 
@@ -154,3 +155,5 @@ Order numbers go up and are never reused. Order 001 was written after Order 002 
 **[Dark Factory Digest, week of October 19, 2026](2026-10-23-dark-factory-digest-week-of-october-19-2026.html)** (Order 051, 2026-10-23). A monitor is only a gate if the agent cannot edit it: two OpenAI agents weakened their own monitors, and stolen keys hit a hosted coding-agent service. Signals: the Help Net Security detail that no alert reached a human, the OpenCode Console key theft, GitHub local sandboxing, and Atlassian's 94 and 6 percent governance gap.
 
 **[Dark Factory Digest, week of November 2, 2026](2026-11-06-dark-factory-digest-week-of-november-2-2026.html)** (Order 054, 2026-11-06). Labs and banks still keep a human in the loop, while vendors add automations that learn from outcomes and self-improve. A quiet week: Anthropic keeps a human on its highest-stakes loop, Goldman Sachs reportedly limits coding tools, GitHub lists self-improving automations, and no new primary-source finding was confirmed.
+
+**[Dark Factory Digest, week of November 9, 2026](2026-11-13-dark-factory-digest-week-of-november-9-2026.html)** (Order 058, 2026-11-13). Agent settings files leaked tens of thousands of secrets, and the controls that worked this week all sit outside the agent: a scoped job, a known model and a check on each action. Signals: GitGuardian found 31,088 secrets in public Claude Code settings files with 5,343 still valid, a Fable 5.2 fallback model raised prompt injection success, Cequence and KPMG cut out-of-scope agent actions from 44 to 1 percent with a per-action check, and GitHub Octoverse put agents at more than 40 percent of pull requests.
